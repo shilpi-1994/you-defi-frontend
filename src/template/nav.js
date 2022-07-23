@@ -1,5 +1,6 @@
 import React from "react";
 import "./nav.css";
+import HomePage from "../components/homePage";
 
 const Nav = () => {
   return (
@@ -10,18 +11,23 @@ const Nav = () => {
           style={{ justifyContent: "space-around" }}
         >
           <a className="navbar-brand" href="#">
-            Ledger
+            YouDefi
           </a>
 
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Your supply
+              <a className="nav-link" href="/loanToken">
+                Loan your token
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Your borrows
+                Borrowed tokens
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/influencers">
+                Influencers
               </a>
             </li>
 

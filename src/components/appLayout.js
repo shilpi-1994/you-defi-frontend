@@ -1,8 +1,9 @@
 //@ts-check
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Nav from "../template/nav";
+import LoanTokenForm from "../forms/loanTokenForm";
 import HomePage from "./homePage";
+import InfluencerPage from "./influencerPage";
 import AppLandingPage from "./landingPage";
 
 const AppLayout = () => {
@@ -13,6 +14,8 @@ const AppLayout = () => {
         <Routes>
           <Route path="/" element={<AppLandingPage />} />
           <Route path="/home" element={<HomePage />} />
+          <Route path="/loanToken" element={<LoanTokenForm />} />
+          <Route path="/influencers" element={<InfluencerPage />} />
         </Routes>
       </BrowserRouter>
     </>

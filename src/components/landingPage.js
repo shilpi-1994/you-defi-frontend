@@ -23,7 +23,7 @@ const AppLandingPage = () => {
 
   return (
     <div className="page-container login-button">
-      <p>Welcome to Ledger</p>
+      <p>Welcome to YouDefi</p>
       <button
         type="button"
         className="btn btn-light"
