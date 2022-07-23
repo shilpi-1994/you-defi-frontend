@@ -1,0 +1,23 @@
+.page-container {
+    color: white;
+    text-align: center;
+}
+
+.page-container p {
+    margin-bottom: 0;
+}
+
+.login-button {
+    position: relative;
+    right: 380px;
+    bottom: 80px;
+}
+
+.login-button .login-container {
+    width: 2000px;
+}
+
+.home-page {
+    /* background-image: unset !important; */
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+}
