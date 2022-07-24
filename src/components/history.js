@@ -9,15 +9,15 @@ import useInitializeEthers from "../common/useInitializeEthers";
 import Button from "react-bootstrap/Button";
 import LentCard from "./lentCard";
 import LentAsset from "./lentAssets";
-import useLoanDetails from "../common/useLoanDetails";
 
-const HomePage = () => {
+const History = () => {
   const signer = useLoginMetamask();
   const data = useInitializeEthers();
-  const loanDetailsObject = useLoanDetails();
   const [lender, setLender] = React.useState();
   const [borrower, setBorrower] = React.useState();
+  const [numberLoans, setLoans] = React.useState();
   const [loanDetails, setLoanDetails] = React.useState([]);
+  const [isBalance, setBalance] = React.useState();
 
   return (
     <div
@@ -31,29 +31,14 @@ const HomePage = () => {
             <LentCard
               isSupply={true}
               lender={lender}
-              loanDetails={loanDetailsObject}
+              loanDetails={loanDetails}
             />
           </Col>
           <Col xs lg="6">
             <BalanceCard
               isSupply={false}
               borrower={borrower}
-              loanDetails={loanDetailsObject}
-            />
-          </Col>
-        </Row>
-        <Row></Row>
-        <br />
-        <Row>
-          <Col xs lg="6">
-            <LentAsset />
-          </Col>
-          <Col xs lg="6">
-            <BorrowedCard
-              isSupply={false}
-              loanDetails={loanDetailsObject}
-              setLender={setLender}
-              setBorrower={setBorrower}
+              loanDetails={loanDetails}
             />
           </Col>
         </Row>
@@ -62,4 +47,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default History;

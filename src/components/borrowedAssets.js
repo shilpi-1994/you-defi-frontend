@@ -3,17 +3,27 @@ import Card from "react-bootstrap/Card";
 import React from "react";
 import ListGroup from "react-bootstrap/ListGroup";
 import useInitializeEthers from "../common/useInitializeEthers";
+import useInitializeTokenEthers from "../common/useInitializeTokenEthers";
+import useLoanDetails from "../common/useLoanDetails";
 
 const BorrowedCard = (props) => {
   const data = useInitializeEthers();
-  console.log("props.loanDetails", props.loanDetails);
+  const loanDetailsObject = useLoanDetails();
+  const tokenData = useInitializeTokenEthers();
+
+  const approve = async () => {
+    const isApprove = await tokenData.approve(
+      "0x9947202eeB59B54a3E15E60DB0cCf2F61970bb00"
+    );
+  };
+
   return (
     <Card style={{ color: "black", fontSize: "14px" }}>
       <Card.Header>Featured</Card.Header>
       <Card.Body>
         <Card.Title>Assets to borrow</Card.Title>
         <ListGroup>
-          {props.loanDetails.map((ele, index) => {
+          {loanDetailsObject.map((ele, index) => {
             const formattedDate = new Date(Number(ele[6]) * 1000);
             const formattedTime =
               ("0" + formattedDate.getHours()).slice(-2) +
@@ -32,7 +42,9 @@ const BorrowedCard = (props) => {
                   Payback within:{formattedDate.toLocaleDateString("en-US")}{" "}
                   {formattedTime}
                 </p>
-                <Button variant="primary">Borrow</Button>
+                <Button variant="primary" onClick={() => approve()}>
+                  Borrow
+                </Button>
               </ListGroup.Item>
             );
           })}

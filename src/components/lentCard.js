@@ -4,16 +4,18 @@ import React from "react";
 import useLoginMetamask from "../common/useLoginMetamask";
 import ListGroup from "react-bootstrap/ListGroup";
 import useLoanDetails from "../common/useLoanDetails";
+import useLenderBorrower from "../common/useLenderBorrower";
 
 const LentCard = (props) => {
   const signer = useLoginMetamask();
   useLoanDetails();
+  const { isLender } = useLenderBorrower();
 
   return (
     <Card style={{ color: "black", fontSize: "14px" }}>
       <Card.Body>
         <Card.Title>{props.isSupply ? "You lent" : "Your borrowed"}</Card.Title>
-        {props.lender !== signer ? (
+        {isLender !== signer ? (
           <Card.Title>Nothing lent yet</Card.Title>
         ) : (
           <ListGroup>
