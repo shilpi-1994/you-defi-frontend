@@ -3,11 +3,11 @@ import Card from "react-bootstrap/Card";
 import React from "react";
 import useLoginMetamask from "../common/useLoginMetamask";
 import ListGroup from "react-bootstrap/ListGroup";
+import useLoanDetails from "../common/useLoanDetails";
 
 const LentCard = (props) => {
   const signer = useLoginMetamask();
-
-  console.log("print", props.lender === signer);
+  useLoanDetails();
 
   return (
     <Card style={{ color: "black", fontSize: "14px" }}>
@@ -35,7 +35,6 @@ const LentCard = (props) => {
                     Payback within:{formattedDate.toLocaleDateString("en-US")}{" "}
                     {formattedTime}
                   </p>
-                  <Button variant="primary">Borrow</Button>
                 </ListGroup.Item>
               );
             })}

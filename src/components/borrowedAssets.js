@@ -6,7 +6,7 @@ import useInitializeEthers from "../common/useInitializeEthers";
 
 const BorrowedCard = (props) => {
   const data = useInitializeEthers();
-
+  console.log("props.loanDetails", props.loanDetails);
   return (
     <Card style={{ color: "black", fontSize: "14px" }}>
       <Card.Header>Featured</Card.Header>

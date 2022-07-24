@@ -5,6 +5,7 @@ import LoanTokenForm from "../forms/loanTokenForm";
 import HomePage from "./homePage";
 import InfluencerPage from "./influencerPage";
 import AppLandingPage from "./landingPage";
+import History from "./history";
 
 const AppLayout = () => {
   return (
