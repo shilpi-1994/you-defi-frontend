@@ -15,10 +15,9 @@ const LentAsset = (props) => {
   return (
     <>
       <Card style={{ color: "black", fontSize: "14px" }}>
-        <Card.Header>Featured</Card.Header>
+        <Card.Header>Assests to lend</Card.Header>
         <Card.Body>
           <Card.Title>
-            Assests to lend <br />
             <span>Balance:</span>
             <span>{finalBal} DAI</span>
           </Card.Title>

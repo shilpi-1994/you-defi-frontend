@@ -29,8 +29,6 @@ const useLoanDetails = () => {
     return numLoans;
   };
 
-  console.log("sdjghfhwefe", loanDetailsObject);
-
   return loanDetailsObject;
 };
 export default useLoanDetails;

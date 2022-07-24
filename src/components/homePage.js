@@ -24,7 +24,9 @@ const HomePage = () => {
       className="page-container home-page"
       style={{ backgroundImage: "unset" }}
     >
-      <p>Welcome to Ledger homepages {signer}</p>
+      <p>
+        Welcome to Ledger homepage <span>{signer}</span>
+      </p>
       <Container>
         <Row className="justify-content-md-center">
           <Col xs lg="6">

@@ -33,6 +33,7 @@ const AppLandingPage = () => {
       >
         Login through Metamask
       </button>
+      <h3>Presented by: Arjun Dev & Shilpi Sinha</h3>
     </div>
   );
 };

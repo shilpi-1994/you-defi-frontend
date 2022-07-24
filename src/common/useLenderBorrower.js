@@ -10,10 +10,14 @@ const useLenderBorrower = () => {
 
   const [isLender, setIsLender] = React.useState();
   const [isBorrower, setIsBorrower] = React.useState();
+  const [isAmount, setIsAmount] = React.useState();
+  const [isLoanId, setIsLoanId] = React.useState();
 
   React.useEffect(() => {
     getLender();
     getBorrower();
+    getAmount();
+    getLoanID();
   }, [signer, loanDetailsObject]);
 
   const getLender = () => {
@@ -34,7 +38,25 @@ const useLenderBorrower = () => {
     setIsBorrower(borrowerAddr);
   };
 
-  return { isLender, isBorrower };
+  const getAmount = () => {
+    const amountValue = loanDetailsObject
+      .map((ele) => Number(ele[3]))
+      .join("")
+      .toString()
+      .toLowerCase();
+    setIsAmount(amountValue);
+  };
+
+  const getLoanID = () => {
+    const loanId = loanDetailsObject
+      .map((ele, index) => Number(index))
+      .join("")
+      .toString()
+      .toLowerCase();
+    setIsLoanId(loanId);
+  };
+
+  return { isLender, isBorrower, isAmount, isLoanId };
 };
 
 export default useLenderBorrower;

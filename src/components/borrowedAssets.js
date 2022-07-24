@@ -5,23 +5,26 @@ import ListGroup from "react-bootstrap/ListGroup";
 import useInitializeEthers from "../common/useInitializeEthers";
 import useInitializeTokenEthers from "../common/useInitializeTokenEthers";
 import useLoanDetails from "../common/useLoanDetails";
+import useLenderBorrower from "../common/useLenderBorrower";
 
 const BorrowedCard = (props) => {
   const data = useInitializeEthers();
   const loanDetailsObject = useLoanDetails();
   const tokenData = useInitializeTokenEthers();
+  const { isAmount, isLoanId } = useLenderBorrower();
 
   const approve = async () => {
     const isApprove = await tokenData.approve(
-      "0x9947202eeB59B54a3E15E60DB0cCf2F61970bb00"
+      "0x9947202eeB59B54a3E15E60DB0cCf2F61970bb00",
+      isAmount
     );
+    await data.takeLoan(isLoanId);
   };
 
   return (
     <Card style={{ color: "black", fontSize: "14px" }}>
-      <Card.Header>Featured</Card.Header>
+      <Card.Header>Assets to borrow</Card.Header>
       <Card.Body>
-        <Card.Title>Assets to borrow</Card.Title>
         <ListGroup>
           {loanDetailsObject.map((ele, index) => {
             const formattedDate = new Date(Number(ele[6]) * 1000);
