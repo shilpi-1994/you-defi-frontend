@@ -45,7 +45,7 @@ const BorrowedCard = (props) => {
                   Payback within:{formattedDate.toLocaleDateString("en-US")}{" "}
                   {formattedTime}
                 </p>
-                <Button variant="primary" onClick={() => approve()}>
+                <Button variant="secondary" onClick={() => approve()}>
                   Borrow
                 </Button>
               </ListGroup.Item>

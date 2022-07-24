@@ -25,7 +25,8 @@ const HomePage = () => {
       style={{ backgroundImage: "unset" }}
     >
       <p>
-        Welcome to Ledger homepage <span>{signer}</span>
+        Welcome to Ledger homepage{" "}
+        <span className="signer-address">{signer}</span>
       </p>
       <Container>
         <Row className="justify-content-md-center">
