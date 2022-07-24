@@ -24,7 +24,7 @@ const History = () => {
       className="page-container home-page"
       style={{ backgroundImage: "unset" }}
     >
-      <p>Welcome to Ledger homepages {signer}</p>
+      <p>Welcome to YouDefi homepage {signer}</p>
       <Container>
         <Row className="justify-content-md-center">
           <Col xs lg="6">

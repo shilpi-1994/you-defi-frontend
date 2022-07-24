@@ -8,12 +8,12 @@ const LoanTokenForm = () => {
       <Form className="loan-token">
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Enter amount</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
+          <Form.Control type="email" placeholder="Enter amount" />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Enter token name</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Control type="password" placeholder="NRT" />
         </Form.Group>
         <Button variant="primary" type="submit">
           Submit

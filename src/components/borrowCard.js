@@ -29,8 +29,8 @@ const BalanceCard = (props) => {
                 <ListGroup.Item key={index}>
                   <p>Token address: {ele[0]}</p>
                   <p>Lender: {ele[1]}</p>
-                  <p>Loan amount: {Number(ele[3]) / 10 ** 18} DAI</p>
-                  <p>Loan interest: {Number(ele[4]) / 10 ** 18} DAI</p>
+                  <p>Loan amount: {Number(ele[3]) / 10 ** 18} NRT</p>
+                  <p>Loan interest: {Number(ele[4]) / 10 ** 18} NRT</p>
                   <p>Collateral (MATIC): {Number(ele[5]) / 10 ** 18} </p>
                   <p>
                     Payback within:{formattedDate.toLocaleDateString("en-US")}{" "}

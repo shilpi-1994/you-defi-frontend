@@ -36,7 +36,7 @@ const InfluencerPage = () => {
           <Card.Title>Hitesh Choudhary</Card.Title>
         </Card.Body>
         <ListGroup className="list-group-flush">
-          <ListGroup.Item>225 USDT</ListGroup.Item>
+          <ListGroup.Item>225 HCT</ListGroup.Item>
         </ListGroup>
         <Card.Body>
           <Card.Link

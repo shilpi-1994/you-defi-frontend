@@ -19,7 +19,7 @@ const LentAsset = (props) => {
         <Card.Body>
           <Card.Title>
             <span>Balance:</span>
-            <span>{finalBal} DAI</span>
+            <span>{finalBal} NRT</span>
           </Card.Title>
         </Card.Body>
       </Card>
