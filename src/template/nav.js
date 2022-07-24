@@ -10,7 +10,7 @@ const Nav = () => {
           className="navbar navbar-expand-sm bg-dark navbar-dark"
           style={{ justifyContent: "space-around" }}
         >
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="/">
             YouDefi
           </a>
 

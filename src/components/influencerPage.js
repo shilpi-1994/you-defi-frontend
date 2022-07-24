@@ -2,10 +2,13 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import ListGroup from "react-bootstrap/ListGroup";
+import useLoginMetamask from "../common/useLoginMetamask";
 
 const InfluencerPage = () => {
+  const signer = useLoginMetamask();
   return (
-    <CardGroup>
+    <CardGroup className="influencer-page">
+      <div>{signer}</div>
       <Card style={{ width: "18rem", marginRight: "20px", color: "black" }}>
         <Card.Img
           variant="top"

@@ -3,8 +3,8 @@ import { ethers } from "ethers";
 import YouDefiArtifact from "../contracts/YouDefi.json";
 import ContractAddress from "../contracts/contract-addresss.json";
 
-const useInitializeEthers = () => {
-  const [data, setData] = useState();
+const useInitializeTokenEthers = () => {
+  const [tokenData, setTokenData] = useState();
   const provider = new ethers.providers.Web3Provider(window.ethereum);
 
   useEffect(() => {
@@ -14,10 +14,10 @@ const useInitializeEthers = () => {
       provider.getSigner(0)
     );
 
-    setData(youDefi);
+    setTokenData(youDefi);
   }, []);
 
-  return data;
+  return tokenData;
 };
 
-export default useInitializeEthers;
+export default useInitializeTokenEthers;

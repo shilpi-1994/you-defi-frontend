@@ -12,7 +12,9 @@ function App() {
       <div className="App">
         <Nav />
         <div className="App-header">
-          <AppLayout />
+          <div>
+            <AppLayout />
+          </div>
         </div>
       </div>
     </>
